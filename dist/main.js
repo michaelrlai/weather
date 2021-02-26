@@ -1,0 +1,1 @@
+!async function(a){void 0===a&&(a="pleasanton");const o=await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${a}&appid=48235cd532d405ca30e2ace10447ff29`),e=await o.json();console.log(e),console.log(e.name),console.log(e.weather[0].main)}("new york");
