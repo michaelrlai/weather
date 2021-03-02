@@ -31,10 +31,11 @@ input[type="text"] {
 }
 
 .header input {
+  font-size: 16px;
   display: inline-block;
   background-color: rgba(255, 255, 255, 0.1);
   color: white;
-  height: 25px;
+  height: 28px;
   width: 160px;
   padding-left: 10px;
   outline: none;
@@ -50,7 +51,7 @@ input[type="text"] {
   display: inline-block;
   background-color: rgba(255, 255, 255, 0.1);
   color: white;
-  height: 25px;
+  height: 28px;
   width: 30px;
   margin-right: 20px;
   outline: none;
