@@ -11,6 +11,13 @@ body {
   font-size: 16px;
 }
 
+input[type="text"] {
+  /* Remove First */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 .header {
   background-color: black;
   display: flex;
@@ -100,7 +107,6 @@ main {
 .hourly-container {
   width: auto;
   font-size: 12px;
-  margin: 50px 0;
   color: white;
   display: flex;
   overflow: auto;
@@ -110,7 +116,7 @@ main {
   background-color: rgba(0, 0, 0, 0.6);
   min-width: 60px;
   text-align: center;
-  margin: 0 10px;
+  margin: 0 5px;
   border-radius: 3px;
 }
 
