@@ -11,11 +11,14 @@ body {
   font-size: 16px;
 }
 
-input[type="text"] {
-  /* Remove First */
+textarea,
+input.text,
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+.input-checkbox {
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  border-radius: 0;
 }
 
 .header {
