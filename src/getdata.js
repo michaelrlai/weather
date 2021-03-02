@@ -4,7 +4,7 @@ export async function getData(city) {
   }
 
   const response = await fetch(
-    `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=48235cd532d405ca30e2ace10447ff29&units=imperial`,
+    `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=48235cd532d405ca30e2ace10447ff29&units=imperial`,
     {
       mode: "cors",
     }
