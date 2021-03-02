@@ -13,46 +13,57 @@ body {
 
 .header {
   background-color: black;
-  text-align: center;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.header .input-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
 }
 
 .header input {
-  background-color: rgb(186, 205, 224);
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
   height: 25px;
   width: 160px;
-  margin: 10px 0;
   padding-left: 10px;
   outline: none;
   border: none;
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  border-left: 1px solid rgba(255, 255, 255, 0.2);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .header button {
-  background-color: rgb(27, 0, 58);
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.1);
   color: white;
   height: 25px;
-  width: 45px;
+  width: 30px;
+  margin-right: 20px;
   outline: none;
   border: none;
-  margin-right: 10px;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   border-right: 1px solid rgba(255, 255, 255, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-weight: 700;
 }
-
+svg:hover {
+  fill: white;
+}
 .header button:hover {
   cursor: pointer;
 }
 
 main {
 }
-
 .current-container {
   text-align: center;
   margin: 30px 0;
@@ -81,17 +92,22 @@ main {
   margin: 0 8px;
 }
 
+.outer-hourly-container {
+  display: flex;
+  justify-content: center;
+}
+
 .hourly-container {
+  width: auto;
   font-size: 12px;
   margin: 50px 0;
   color: white;
   display: flex;
-  justify-content: center;
   overflow: auto;
 }
 
 .hourly-container .hourly {
-  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.6);
   min-width: 60px;
   text-align: center;
   margin: 0 10px;
