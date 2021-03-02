@@ -1,5 +1,3 @@
-import { convertUnixTime, convertUnixDay } from "./conversion";
-
 export async function getData(city) {
   if (city === undefined) {
     city = "san francisco";
