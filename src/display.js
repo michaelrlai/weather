@@ -1,6 +1,4 @@
 export function display(data) {
-  console.log(data);
-
   document.querySelector(".current-container").innerHTML = `
     <div class="current-city">${data.current.name}</div>
     <div class="current-weather">${data.current.weather}</div>

@@ -6,6 +6,8 @@ async function app(place) {
   try {
     const data = await getData(place);
     const dataSorted = sortData(data);
+    console.log(data);
+    console.log(dataSorted);
     display(dataSorted);
   } catch (err) {
     errorHandling();
