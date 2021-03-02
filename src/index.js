@@ -9,6 +9,7 @@ async function app(place) {
     console.log(data);
     console.log(dataSorted);
     display(dataSorted);
+    document.querySelector("input").blur();
   } catch (err) {
     errorHandling();
   }
@@ -26,8 +27,6 @@ function inputValidation(inputtedCity) {
   }
 }
 
-app("san jose");
-
 document.querySelector("button").addEventListener("click", function () {
   let inputtedCity = document.querySelector("input").value;
   inputValidation(inputtedCity);
@@ -39,3 +38,5 @@ document.querySelector("input").addEventListener("keydown", function (e) {
     inputValidation(inputtedCity);
   }
 });
+
+app("san jose");
