@@ -28,8 +28,9 @@ export function display(data) {
         <div class="daily-day">${data.daily[j].day}</div>
         <img class="daily-icon" src="http://openweathermap.org/img/wn/${data.daily[j].icon}@4x.png">
         <div class="daily-high-low-container">
-          <div class="daily-high">${data.daily[j].high}&deg</div>
           <div class="daily-low">${data.daily[j].low}&deg</div>
+          <div class="daily-high">${data.daily[j].high}&deg</div>
+
         </div>
       </div>  
     `;
