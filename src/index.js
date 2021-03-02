@@ -6,8 +6,8 @@ async function app(place) {
   try {
     const data = await getData(place);
     const dataSorted = sortData(data);
-    display(dataSorted);
-    document.querySelector("input").value = "";
+    document.querySelector(".current-container").textContent = "HELLO";
+    //  display(dataSorted);
   } catch (err) {
     errorHandling();
     //console.log(err);
