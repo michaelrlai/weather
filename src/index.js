@@ -1,14 +1,41 @@
-import { getData } from "./weather";
+import { getData } from "./getdata";
+import { sortData } from "./sortdata";
+import { display } from "./display";
 
 async function app(place) {
   try {
-    let data = await getData(place);
-    console.log(data);
-    console.log("did this run?");
+    const data = await getData(place);
+    const dataSorted = sortData(data);
+    display(dataSorted);
+    document.querySelector("input").value = "";
   } catch (err) {
-    console.log("this ran");
-    console.log(err);
+    errorHandling();
+    //console.log(err);
+  }
+}
+
+function errorHandling() {
+  console.log("Please enter a valid city");
+}
+
+function inputValidation(inputtedCity) {
+  if (inputtedCity === "null" || inputtedCity === "") {
+    errorHandling();
+  } else {
+    app(inputtedCity);
   }
 }
 
 app("san jose");
+
+document.querySelector("button").addEventListener("click", function () {
+  let inputtedCity = document.querySelector("input").value;
+  inputValidation(inputtedCity);
+});
+
+document.querySelector("input").addEventListener("keydown", function (e) {
+  let inputtedCity = document.querySelector("input").value;
+  if (e.keyCode === 13) {
+    inputValidation(inputtedCity);
+  }
+});
