@@ -4,12 +4,18 @@ export async function getData(city) {
   }
 
   const response = await fetch(
-    `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=48235cd532d405ca30e2ace10447ff29&units=imperial`
+    `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=48235cd532d405ca30e2ace10447ff29&units=imperial`,
+    {
+      mode: "cors",
+    }
   );
   const currentWeather = await response.json();
 
   const secondResponse = await fetch(
-    `https://api.openweathermap.org/data/2.5/onecall?lat=${currentWeather.coord.lat}&lon=${currentWeather.coord.lon}&appid=48235cd532d405ca30e2ace10447ff29&units=imperial`
+    `https://api.openweathermap.org/data/2.5/onecall?lat=${currentWeather.coord.lat}&lon=${currentWeather.coord.lon}&appid=48235cd532d405ca30e2ace10447ff29&units=imperial`,
+    {
+      mode: "cors",
+    }
   );
   const hourlyDailyWeather = await secondResponse.json();
 

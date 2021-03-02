@@ -6,11 +6,9 @@ async function app(place) {
   try {
     const data = await getData(place);
     const dataSorted = sortData(data);
-    document.querySelector(".current-container").textContent = "HELLO";
-    //  display(dataSorted);
+    display(dataSorted);
   } catch (err) {
     errorHandling();
-    //console.log(err);
   }
 }
 

@@ -1,7 +1,7 @@
 export function display(data) {
   console.log(data);
-  document.querySelector(".current-container").textContent = "HELLO";
-  /*   document.querySelector(".current-container").innerHTML = `
+
+  document.querySelector(".current-container").innerHTML = `
     <div class="current-city">${data.current.name}</div>
     <div class="current-weather">${data.current.weather}</div>
     <div class="current-temp">${data.current.temp}&deg</div>
@@ -19,5 +19,5 @@ export function display(data) {
     <div class="hourly-temp">${data.hourly[i].temp}&deg</div>
   </div>
 `;
-  } */
+  }
 }
