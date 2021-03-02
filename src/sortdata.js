@@ -18,6 +18,7 @@ export function sortData(data) {
       time: convertUnixTime(data.hourlyDailyWeather.hourly[i + 1].dt),
       weather: data.hourlyDailyWeather.hourly[i + 1].weather[0].main,
       temp: Math.round(data.hourlyDailyWeather.hourly[i + 1].temp),
+      icon: data.hourlyDailyWeather.hourly[i + 1].weather[0].icon,
     };
     dataSorted.hourly.push(hour);
   }
@@ -28,6 +29,7 @@ export function sortData(data) {
       weather: data.hourlyDailyWeather.daily[j + 1].weather[0].main,
       high: Math.round(data.hourlyDailyWeather.daily[j + 1].temp.max),
       low: Math.round(data.hourlyDailyWeather.daily[j + 1].temp.min),
+      icon: data.hourlyDailyWeather.daily[j + 1].weather[0].icon,
     };
     dataSorted.daily.push(day);
   }

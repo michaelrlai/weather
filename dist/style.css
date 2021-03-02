@@ -118,14 +118,57 @@ main {
 
 .hourly-container .hourly {
   background-color: rgba(0, 0, 0, 0.6);
+  width: 60px;
   min-width: 60px;
   text-align: center;
   margin: 0 5px;
   border-radius: 3px;
+  padding: 10px 0;
 }
 
-.hourly-container .hourly .hourly-time,
-.hourly-weather,
-.hourly-temp {
-  margin: 15px 0;
+.hourly-container .hourly .hourly-weather {
+  margin-bottom: 10px;
+}
+
+.hourly-icon {
+  width: 60px;
+  margin: 0px;
+}
+
+.outer-daily-container {
+  display: flex;
+  justify-content: center;
+}
+
+.daily-container {
+  margin: 30px;
+  color: white;
+}
+
+.daily {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+
+  margin: 5px;
+}
+
+.daily-container .daily-day {
+  width: 160px;
+}
+
+.daily-container .daily-icon {
+  width: 45px;
+}
+
+.daily-container .daily-high-low-container {
+  width: 160px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.daily-container .daily-high,
+.daily-low {
+  margin: 10px;
 }
